@@ -31,7 +31,6 @@ document.getElementById('calculate-button').addEventListener('click', function (
     updateTotalField('total-expenses', totalAmount);
 
     // Calculate Balance 
-
     const totalBalance = newIncomeAmount - totalAmount;
     updateTotalField('balance-total', totalBalance);
 })
