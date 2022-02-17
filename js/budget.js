@@ -14,15 +14,10 @@ function updateTotalField(totalFieldId, amount) {
     totalElement.innerText = amount;
 }
 
-// Income input 
-document.getElementById('income-btn').addEventListener('click', function () {
-    const newIncomeAmount = getInputValue('income-input');
-    updateTotalField('income-amount', newIncomeAmount);
-    incomeBalance.innerText = newIncomeAmount;
-})
-
 // Calculate
 document.getElementById('calculate-button').addEventListener('click', function () {
+    // Income input 
+    const newIncomeAmount = getInputValue('income-input');
     // Calculate Expenses 
     const newFoodAmount = getInputValue('food-input');
     const newRentAmount = getInputValue('rent-input');
