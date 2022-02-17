@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+
 </head>
 
 <body>
@@ -33,12 +34,13 @@
                                     <h6>Income</h6>
                                     <div class="form-row">
                                         <div class="col-12 col-sm-12 col-md-12 mb-3">
-                                            <label>Income</label>
-                                            <input type="text" class="is-invalid" id="validationServer01"
-                                                placeholder="Income">
-                                            <div class="invalid-feedback">
+                                            <label>Income<span id="income-amount">0000</span></label>
+                                            <input type="text" class="is-invalid" id="income-input"
+                                                placeholder="Please Enter the amount">
+                                            <div class="invalid-feedback d-none">
                                                 Please provide a valid Number.
                                             </div>
+                                            <div id="income-btn">income</div>
                                         </div>
                                     </div>
                                 </div>
@@ -47,53 +49,61 @@
                                     <h6>Expenses</h6>
                                     <div class="form-row">
                                         <div class="col-12 col-sm-12 col-md-12 mb-3">
-                                            <label>Food:</label>
-                                            <input type="text" class="is-invalid" id="validationServer03"
-                                                placeholder="Food Expenses">
-                                            <div class="invalid-feedback">
+                                            <label>Food:<span id="food-exp-amount">0000</span></label>
+                                            <input type="text" class="is-invalid" id="food-input"
+                                                placeholder="Please Enter the amount">
+                                            <div class="invalid-feedback d-none">
                                                 Please provide a valid Number.
                                             </div>
+                                            <div id="food-btn">income</div>
+
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="col-12 col-sm-12 col-md-12 mb-3">
-                                            <label>Rent:</label>
-                                            <input type="text" class="is-invalid" id="validationServer03"
-                                                placeholder="Rent Expenses">
-                                            <div class="invalid-feedback">
+                                            <label>Rent:<span id="rent-exp-amount">0000</span></label>
+                                            <input type="text" class="is-invalid" id="rent-input"
+                                                placeholder="Please Enter the amount">
+                                            <div class="invalid-feedback d-none">
                                                 Please provide a valid Number.
                                             </div>
+                                            <div id="rent-btn">income</div>
+
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="col-12 col-sm-12 col-md-12 mb-3">
-                                            <label>Clothes:</label>
-                                            <input type="text" class="is-invalid" id="validationServer03"
-                                                placeholder="Clothes Expenses">
-                                            <div class="invalid-feedback">
+                                            <label>Clothes:<span id="clothes-exp-amount">0000</span></label>
+                                            <input type="text" class="is-invalid" id="clothe-input"
+                                                placeholder="Please Enter the amount">
+                                            <div class="invalid-feedback d-none">
                                                 Please provide a valid Number.
                                             </div>
+                                            <div id="clothe-btn">income</div>
+
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary" type="submit">Calculate</button>
+                                    <button id="calculate-button" class="btn btn-primary"
+                                        type="submit">Calculate</button>
                                 </div>
                                 <!-- Total -->
-                                <h6>Total Expenses: 5500</h6>
-                                <h6>Balance: 4500</h6>
+                                <h6>Total Expenses: <span id="total-expenses">0000</span></h6>
+                                <h6>Balance: <span id="balance-total">0000</span></h6>
                                 <!-- Savings -->
                                 <div class="form-row">
                                     <div class="col-4 col-sm-4 col-md-4 mb-3 d-inline">
                                         <label>Save:</label>
-                                        <input type="text" class="is-invalid" id="validationServer03" placeholder="20">
+                                        <input type="text" class="is-invalid" id="save-input"
+                                            placeholder="Please Enter the amount">
                                         <span>%</span>
-                                        <button class="btn btn-primary" type="submit">Save</button>
-                                        <div class="invalid-feedback">
+                                        <button id="save-button" class="btn btn-primary" type="submit">Save</button>
+                                        <div class="invalid-feedback d-none">
                                             Please provide a valid Number.
                                         </div>
                                     </div>
                                 </div>
-                                <h6>Saving Amount: 2000 </h6>
-                                <h6>Remaining Balance: 2500 </h6>
+                                <h6>Saving Amount: 0000 </h6>
+                                <h6>Remaining Balance: 0000 </h6>
                             </form>
                         </div>
                     </div>
@@ -102,14 +112,8 @@
         </div>
         </div>
     </section>
-
     <!-- custom js  -->
     <script src="js/budget.js"></script>
-
-    <!-- bootstrap js  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
