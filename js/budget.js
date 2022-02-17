@@ -24,30 +24,18 @@ document.getElementById('income-btn').addEventListener('click', function () {
     // console.log(newincomeAmount);
 
 })
-// Food Expenses
-document.getElementById('food-btn').addEventListener('click', function () {
+
+// Calculate Expenses 
+document.getElementById('calculate-button').addEventListener('click', function () {
 
     const newFoodAmount = getInputValue('food-input');
-    const foodBalance = document.getElementById('food-exp-amount');
-    const previousFoodText = foodBalance.innerText;
-    const previousFoodAmount = parseFloat(previousFoodText);
-
-    foodBalance.innerText = newFoodAmount;
-    console.log(newFoodAmount);
-
-})
-// Rent Expenses
-document.getElementById('rent-btn').addEventListener('click', function () {
-
     const newRentAmount = getInputValue('rent-input');
-
-    const rentBalance = document.getElementById('rent-exp-amount');
-    rentBalance.innerText = newRentAmount;
-})
-// Clothe Expenses
-document.getElementById('clothe-btn').addEventListener('click', function () {
-
     const newClotheAmount = getInputValue('clothe-input');
-    const clotheBalance = document.getElementById('clothes-exp-amount');
-    clotheBalance.innerText = newClotheAmount;
+
+    const expensesBalance = document.getElementById('total-expenses');
+    const previousExpensesText = expensesBalance.innerText;
+    const previousExpensesAmount = parseFloat(previousExpensesText);
+
+    expensesBalance.innerText = newFoodAmount + newRentAmount + newClotheAmount;
+    // console.log(newincomeAmount);
 })
