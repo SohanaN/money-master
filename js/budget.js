@@ -5,37 +5,31 @@ function getInputValue(inputId) {
     const inputField = document.getElementById(inputId);
     const inputAmountText = inputField.value;
     const amountValue = parseFloat(inputAmountText);
-    // clear input field
-    // inputField.value = '';
-
     return amountValue;
+}
+// Update Amount 
+function updateTotalField(totalFieldId, amount) {
+    const totalElement = document.getElementById(totalFieldId);
+    const totalText = totalElement.innerText;
+    const previousTotal = parseFloat(totalText);
+    totalElement.innerText = previousTotal + amount;
 }
 
 // Income input 
 document.getElementById('income-btn').addEventListener('click', function () {
-
     const newIncomeAmount = getInputValue('income-input');
-
-    const incomeBalance = document.getElementById('income-amount');
-    const previousIncomeText = incomeBalance.innerText;
-    const previousIncomeAmount = parseFloat(previousIncomeText);
+    updateTotalField('income-amount', newIncomeAmount);
 
     incomeBalance.innerText = newIncomeAmount;
-    // console.log(newincomeAmount);
 
 })
 
 // Calculate Expenses 
 document.getElementById('calculate-button').addEventListener('click', function () {
-
     const newFoodAmount = getInputValue('food-input');
     const newRentAmount = getInputValue('rent-input');
     const newClotheAmount = getInputValue('clothe-input');
-
-    const expensesBalance = document.getElementById('total-expenses');
-    const previousExpensesText = expensesBalance.innerText;
-    const previousExpensesAmount = parseFloat(previousExpensesText);
-
-    expensesBalance.innerText = newFoodAmount + newRentAmount + newClotheAmount;
-    // console.log(newincomeAmount);
+    const totalAmount = newFoodAmount + newRentAmount + newClotheAmount;
+    updateTotalField('total-expenses', totalAmount);
+    expensesBalance.innerText = totalAmount;
 })
