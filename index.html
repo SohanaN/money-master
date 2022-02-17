@@ -25,15 +25,16 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6">
-                    <div class="budget-form p-4 m-2 rounded shadow p-3 mb-5 bg-white rounded">
-                        <div class="d-flex align-items-center justify-content-center text-center">
+                    <div class="p-4 m-2 rounded shadow p-3 mb-5 bg-white rounded">
+                        <div class="d-flex justify-content-center text-center">
                             <form>
+                                <!-- Income  -->
                                 <div class="income">
                                     <h6>Income</h6>
                                     <div class="form-row">
                                         <div class="col-12 col-sm-12 col-md-12 mb-3">
                                             <label>Income</label>
-                                            <input type="text" class="form-control is-invalid" id="validationServer01"
+                                            <input type="text" class="is-invalid" id="validationServer01"
                                                 placeholder="Income">
                                             <div class="invalid-feedback">
                                                 Please provide a valid Number.
@@ -41,12 +42,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="expenses">
+                                <!-- Expenses  -->
+                                <div class="expenses p-2">
                                     <h6>Expenses</h6>
                                     <div class="form-row">
                                         <div class="col-12 col-sm-12 col-md-12 mb-3">
                                             <label>Food:</label>
-                                            <input type="text" class="form-control is-invalid" id="validationServer03"
+                                            <input type="text" class="is-invalid" id="validationServer03"
                                                 placeholder="Food Expenses">
                                             <div class="invalid-feedback">
                                                 Please provide a valid Number.
@@ -56,7 +58,7 @@
                                     <div class="form-row">
                                         <div class="col-12 col-sm-12 col-md-12 mb-3">
                                             <label>Rent:</label>
-                                            <input type="text" class="form-control is-invalid" id="validationServer03"
+                                            <input type="text" class="is-invalid" id="validationServer03"
                                                 placeholder="Rent Expenses">
                                             <div class="invalid-feedback">
                                                 Please provide a valid Number.
@@ -66,17 +68,30 @@
                                     <div class="form-row">
                                         <div class="col-12 col-sm-12 col-md-12 mb-3">
                                             <label>Clothes:</label>
-                                            <input type="text" class="form-control is-invalid" id="validationServer03"
+                                            <input type="text" class="is-invalid" id="validationServer03"
                                                 placeholder="Clothes Expenses">
                                             <div class="invalid-feedback">
                                                 Please provide a valid Number.
                                             </div>
                                         </div>
                                     </div>
+                                    <button class="btn btn-primary" type="submit">Calculate</button>
                                 </div>
-                                <button class="btn btn-primary" type="submit">Calculate</button>
+                                <!-- Total -->
                                 <h6>Total Expenses: 5500</h6>
                                 <h6>Balance: 4500</h6>
+                                <!-- Savings -->
+                                <div class="form-row">
+                                    <div class="col-4 col-sm-4 col-md-4 mb-3 d-inline">
+                                        <label>Save:</label>
+                                        <input type="text" class="is-invalid" id="validationServer03" placeholder="20">
+                                        <span>%</span>
+                                        <button class="btn btn-primary" type="submit">Save</button>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid Number.
+                                        </div>
+                                    </div>
+                                </div>
                                 <h6>Saving Amount: 2000 </h6>
                                 <h6>Remaining Balance: 2500 </h6>
                             </form>
